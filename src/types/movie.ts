@@ -10,6 +10,7 @@ export type MovieSearchResult = {
 
 export type MovieDetails = MovieSearchResult & {
   runtime: number | null;
+  genres: string[];
 };
 
 export type MovieSearchResponse = {

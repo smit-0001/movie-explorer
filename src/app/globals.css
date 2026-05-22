@@ -77,7 +77,9 @@ p {
 .session,
 .actions,
 .tabs,
-.favorite-heading {
+.favorite-heading,
+.favorite-actions,
+.rating-counter {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -154,6 +156,39 @@ p {
   gap: 10px;
   border-top: 1px solid #e4e7eb;
   padding-top: 14px;
+}
+
+.favorite-actions button {
+  flex: 1;
+}
+
+.inline-controls {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.note-field {
+  display: grid;
+  gap: 6px;
+}
+
+.rating-counter {
+  width: fit-content;
+}
+
+.rating-counter button {
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.rating-counter span {
+  min-width: 88px;
+  padding: 0 0.25rem;
+  text-align: center;
 }
 
 .favorite-heading {

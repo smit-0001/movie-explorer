@@ -47,6 +47,20 @@ Run the app:
 npm run dev
 ```
 
+Run checks before a build:
+
+```bash
+npm run typecheck
+npm test
+npm run build
+```
+
+Use watch mode while editing tests:
+
+```bash
+npm run test:watch
+```
+
 ## Deployment Notes
 
 For Vercel, add the same environment values in the project settings.

@@ -22,6 +22,10 @@ type TmdbSearchResponse = {
 
 type TmdbMovieDetails = TmdbSearchMovie & {
   runtime?: number | null;
+  genres?: Array<{
+    id: number;
+    name: string;
+  }>;
 };
 
 export class TmdbError extends Error {
@@ -108,6 +112,7 @@ export async function getMovieDetails(id: number): Promise<MovieDetails> {
   return {
     ...normalizeMovie(data),
     runtime: data.runtime ?? null,
+    genres: data.genres?.map((genre) => genre.name).filter(Boolean) ?? [],
   };
 }
 
