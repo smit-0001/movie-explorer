@@ -106,7 +106,7 @@ describe("tmdb client", () => {
   });
 
   it("throws a TMDB error when the API key is missing", async () => {
-    vi.unstubAllEnvs();
+    vi.stubEnv("TMDB_API_KEY", "");
 
     await expect(searchMovies("batman", 1)).rejects.toBeInstanceOf(TmdbError);
   });
